@@ -20,7 +20,7 @@ const projects: Project[] = [
   { id: 8, title: 'TaskList', technologies: 'https://skillicons.dev/icons?i=react,css', imageUrl: '/images/tasklist.png', githubUrl: 'https://github.com/Gurottesque/Tasklist', liveUrl: 'https://dulcet-souffle-f23328.netlify.app' },
 ];
 
-const Projects: React.FC = () => {
+function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const showPrevious = () => {
@@ -35,9 +35,9 @@ const Projects: React.FC = () => {
     <section id="projects" className="text-white text-4xl font-semibold tracking-widest py-16">
       <p className="text-white text-6xl text-center font-semibold tracking-widest mb-12">Projects</p>
       <div className="relative">
-        <div className="flex overflow-hidden 2xl:ml-64 px-16">
+        <div className="flex overflow-hidden px-16">
           {projects.slice(currentIndex, currentIndex + 4).map((project) => (
-            <div key={project.id} className="w-72 shrink-0 sm:w-1/2 md:w-72 p-4 transition-transform transform hover:scale-105 hover:shadow-2xl hover:z-10">
+            <div key={project.id} className="w-72 shrink-0 md:w-64 sm:w-1/2 2xl:w-1/4 p-4 transition-transform transform hover:scale-105 hover:shadow-2xl hover:z-10">
               <div className="bg-gray-800 rounded-lg p-6 shadow-lg hover:bg-gray-700 transition-colors">
                 <img src={project.imageUrl} alt={project.title} className="w-full h-60 object-cover rounded-md mb-4" />
                 <h3 className="text-2xl text-center font-semibold mb-2">{project.title}</h3>
@@ -63,13 +63,13 @@ const Projects: React.FC = () => {
           ))}
         </div>
         <button
-          className="2xl:left-64 absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-600 transition-colors"
+          className=" absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-600 transition-colors"
           onClick={showPrevious}
         >
           &lt;
         </button>
         <button
-          className="2xl:right-72 absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-600 transition-colors"
+          className=" absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-600 transition-colors"
           onClick={showNext}
         >
           &gt;
