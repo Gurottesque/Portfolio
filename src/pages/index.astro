@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Projects from '../components/Projects'
+---
+
+<Layout title="Guro Portfolio">
+	<Navbar></Navbar>
+
+	<!-- Main part -->
+	<main class="text-center py-32 bg-gradient-to-r from-[#13151A] to-[#31465c] min-h-screen flex flex-col justify-center items-center">
+		<div class="relative inline-block mb-4">
+			<p class="maintext text-white text-8xl font-semibold tracking-widest mb-4 animate-pulse font-merriweather"></p>
+			<div class="absolute inset-0 bg-gradient-to-r from-[#F8F8F8] to-transparent opacity-30 blur-md -z-10"></div>
+		</div>
+		<p class="text-white text-3xl mt-4 font-semibold tracking-widest animate-fade-in">Full-Stack Developer</p>
+	</main>
+
+	<style>
+
+	.maintext:after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		line-height: 48px;
+		left: 30%;
+		top: 50%;
+		animation: typing 2s linear 1;
+		animation-fill-mode: forwards;
+	}
+
+
+	@keyframes typing {
+	0% {
+		content: "G";
+	}
+	10% {
+		content: "Gu";
+	}
+	15% {
+		content: "Gur";
+	}
+	20% {
+		content: "Guro";
+	}
+	40% {
+		content: "Gurot";
+	}
+	50% {
+		content: "Gurott";
+	}
+	60% {
+		content: "Gurotte";
+	}
+	70% {
+		content: "Gurottes";
+	}
+	80% {
+		content: "Gurottesq";
+	}
+	90% {
+		content: "Gurottesqu";
+	}
+	100% {
+		content: "Gurottesque";
+	}
+	}
+	</style>
+
+	<!-- About me -->
+	<section id="about" class="py-16">
+		<p class="text-white text-6xl text-center font-semibold tracking-widest mb-12">About Me</p>
+		<div class="flex flex-col md:flex-row justify-center">
+			<div class="bg-gray-950 rounded-lg shadow-lg w-full max-w-4xl p-6 flex flex-col md:flex-row">
+	
+				<!-- Texto y logos -->
+				<div class="w-full md:w-1/2 flex flex-col">
+					<div class="flex-1">
+						<p class="text-lg text-gray-300 mb-6">
+							Full-stack web developer committed to creating <span class="text-green-500">modern</span> and <span class="text-green-500">scalable</span> applications with an emphasis on <span class="text-green-500">security.</span> To me, information security is crucial for the development of any application.
+						</p>
+						<p class="text-lg text-gray-300 mt-6">
+							I consider myself proficient in the following <span class="text-green-500">Web Technologies</span> and <span class="text-green-500">General Computing Skills</span>
+						</p>
+					</div>
+					<div class="flex-1">
+						<img src="https://skillicons.dev/icons?i=linux,bash,cpp,c,python" alt="General skills" class="">
+						<img src="https://skillicons.dev/icons?i=html,css,js,react,astro,nextjs,tailwind" alt="Frontend Skills" class="mt-5">
+						<img src="https://skillicons.dev/icons?i=express,nestjs,postman,mysql,postgres" alt="Backend Skills" class="mt-5 ">
+					</div>
+				</div>
+	
+				<!-- Imagen -->
+				<div class="w-full md:w-1/2 flex justify-center items-center">
+					<img src="https://www.icegif.com/wp-content/uploads/2023/05/icegif-567.gif" alt="Mi foto" class="rounded-lg shadow-md max-w-full">
+				</div>
+	
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects -->
+	<Projects client:load></Projects>
+
+<!-- Contact me -->
+<section id="contact" class="py-16 bg-gradient-to-r from-[#13151A] to-[#1F2937]">
+	<div class="w-full max-w-3xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg">
+	  <h2 class="text-4xl text-white text-center font-semibold mb-8">Contact Me</h2>
+	  <div class="text-center text-white">
+		<p class="mb-4">You can contact me via email:</p>
+		<a href="mailto:g4angelgg@hotmail.com" class="text-blue-400 hover:text-blue-600 transition-colors duration-300">
+		  g4angelgg@hotmail.com
+		</a>
+		<p class="mt-4">For a faster response, reach me through discord:</p>
+		<div class="flex items-center justify-center mt-4">
+			<img src="https://skillicons.dev/icons?i=discord" alt="Discord Logo" class="w-6 h-6 mr-2">
+			<span class="text-blue-400">angelinmist</span>
+		  </div>
+	  </div>
+	</div>
+  </section>
+
+</Layout>
+
